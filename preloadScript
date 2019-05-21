@@ -4,14 +4,60 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>JS Bin</title>
+  <style>
+  .loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #00212b;
+}
+.loader-logo {
+  z-index: 5;
+  width: 150px;
+  height: 150px;
+  padding-bottom: 10px;
+  /*  Found this logo on google images  */
+  background-image: url("https://www.omnisci.com/globalassets/mapd-content/assets/static/icons/develop_new_applicationson_an_open-source_core.png");
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position: center;
+}
+.loader-circle {
+  border-top: 1px solid #d0d9df; /* Blue */
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+  </style>
 </head>
 <body>
  
   
-  <div id="preload"> im looader......</div> 
+  <div class="loader-container" id="preload">
+        <div class="loader-logo">
+            <div class="loader-circle"></div>
+        </div>
+    </div>
   
   
-  <br> <br> <br> <br> <br> <br> <br>
+     <br> <br> <br> <br> <br> <br> <br>
     <iframe src = "https://www.portotheme.com/wordpress/porto/real-estate/" width = "555" height = "200">
          Sorry your browser does not support inline frames.
       </iframe>
